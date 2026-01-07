@@ -38,22 +38,7 @@
     
 
 # Now let's see how we can make the UI in the Routes we created (So we need HTML CSS for that
-
-
-
-        
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-
+<ol>
+    <li>create template folder in container (not in the Project directory)</li>
+    <li>Notify settings.py that we have made those changes</li>
 </ol>
