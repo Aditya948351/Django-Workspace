@@ -31,9 +31,9 @@
     <li>Now create function in views.py otherwise it will give error no Attribute</li>
     <li>so run the server now using cmd terminal command<code>python manage.py runserver </code></li>
     <li>Head to the <code>122.0.0.1:8000</code></li>
-        <div>
-            <img width=50% src = "https://github.com/Aditya948351/Django-Workspace/blob/main/Readme-assets/views-basic.png?raw=true" alt="views">
-            <img width=50% src = "https://github.com/Aditya948351/Django-Workspace/blob/main/Readme-assets/urls-basic.png?raw=true" alt="urls">
+        <div width="100%">
+            <img align="left" width=50% src = "https://github.com/Aditya948351/Django-Workspace/blob/main/Readme-assets/views-basic.png?raw=true" alt="views">
+            <img align="right" width=50% src = "https://github.com/Aditya948351/Django-Workspace/blob/main/Readme-assets/urls-basic.png?raw=true" alt="urls">
         </div>
     
 
