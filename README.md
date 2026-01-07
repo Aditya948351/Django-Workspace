@@ -50,7 +50,7 @@
         </code>        
     </div>
     <li>Now Restart the Server once again.</li>
-    <li></li>
-    <li></li>
+    <li>Lol, Error Received cause u haven't imported render</li>
+    <li>So, Now add the Import statement in views.py <br> <p><code>from django.shortcuts import render</code></p></li>
     
 </ol>
