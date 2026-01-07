@@ -1,56 +1,86 @@
-# Some Things to Check before Working with Django
-<ol>
-    <li>Check if Virtual invironment is turned on.</li>
-    <li>Ensure u are working on Command Prompt terminal not the Powershell</li>
-    <li>First do changes in URLs file then vieews.py file must be made</li>
-</ol>
+# 🚀 Django Internship Workspace
 
+Welcome to my Django learning repository! This workspace documents my journey and progress during the Django Internship at **Edunet Foundation**. Here, I apply the concepts learned in daily sessions to build practical web applications.
 
-<h1>Django Project Initialization Steps</h1>
+---
 
-<ol style="color:#fff">
-    <li>VS Code >python: create environment     -->> Work on the steps after.</li>
-    <li>Virtual Environment will be initiated automatically.</li>
-    <li>Activate Virtual Environment.</li>
-    <li>Install Django.</li>
-    <li>Start Project with Django now.</li>
-    <li>
-        Start Your Project:<br>
-        <code>django-admin startproject <"your project name"></code>
-    </li>
-    <li>Installing Django: <code>pip install django</code></li>
-    <strong>Note: to check if Django is install or not try pip list</strong><br>
-    <li>Create views.py inside ur Project Folder (cd ur Project name first)</li>
-    <p><strong>views.py includes the /admin /about i.e. routes</strong></p>
-    <p>In django we call function first then we create
-    <li>We need to import the views.py file first using <code>import views "from <"current directore"></code></li>
-    <li>create home function in views.py (already imported views.py in urls) <br>
-    <code>from . import views</code>
-    </li>
-    <li>Add this line in URLs: <br> <code>path('home/', views.home, name='home')</code></li>
-    <li>Now create function in views.py otherwise it will give error no Attribute</li>
-    <li>so run the server now using cmd terminal command<code>python manage.py runserver </code></li>
-    <li>Head to the <code>122.0.0.1:8000</code></li>
-        <div width="100%">
-            <img width=50% src = "https://github.com/Aditya948351/Django-Workspace/blob/main/Readme-assets/views-basic.png?raw=true" alt="views">
-            <img width=50% src = "https://github.com/Aditya948351/Django-Workspace/blob/main/Readme-assets/urls-basic.png?raw=true" alt="urls">
-        </div>
-    
+## 📚 Course Index & Progress
 
-# Now let's see how we can make the UI in the Routes we created (So we need HTML CSS for that
-<ol type="1">
-    <li>create template folder in container (not in the Project directory)</li>
-    <li>Notify settings.py that we have made those changes</li>
-    <li>in DRIS add this in [] --> <code>DIRS=['templates']</code></li>
-    <div>
-        <li>in ur function in views.py ass this</li>
-        <code>
-            def home(request):
-                return render(request, 'home.html')
-        </code>        
-    </div>
-    <li>Now Restart the Server once again.</li>
-    <li>Lol, Error Received cause u haven't imported render</li>
-    <li>So, Now add the Import statement in views.py <br> <p><code>from django.shortcuts import render</code></p></li>
-    
-</ol>
+### 🛠️ Module 1: Environment Setup & Prerequisites
+Before diving into code, we established a robust development environment.
+- **Python Installation**: Verified Python installation and version.
+- **Virtual Environment**: Created and activated a virtual environment to manage dependencies isolated from the system.
+  ```bash
+  python -m venv .venv
+  .venv\Scripts\activate
+  ```
+- **Django Installation**: Installed the Django framework using pip.
+  ```bash
+  pip install django
+  ```
+
+### 🏗️ Module 2: First Project - The Foundation
+In this module, we learned the core architecture of a Django project.
+- **Project Initialization**: Created the first project using `django-admin startproject`.
+- **Project Structure**: Explored `manage.py`, `settings.py`, `urls.py`, and `wsgi.py`.
+- **Views & URLs**:
+    - Created function-based views in `views.py`.
+    - Mapped URLs to views using `path()` in `urls.py`.
+- **Templates**:
+    - Integrated HTML templates for dynamic rendering.
+    - Configured `TEMPLATES` settings.
+- **Static Files**:
+    - Managed CSS, Images, and JavaScript.
+    - Configured `STATIC_URL` and `STATICFILES_DIRS`.
+- **Outcome**: A multi-page website with a Home, About, Gallery, and Contact page, featuring a custom UI.
+
+### 🚀 Module 3: Second Project - Expanding Horizons
+Building upon the basics, we created a second project to reinforce routing concepts.
+- **New Project Setup**: Initialized `SecondProject`.
+- **Multiple Views**: Implemented distinct views for different sections.
+    - `home`: Welcome to HomePage
+    - `contact`: Welcome to ContactsPage
+    - `gallery`: Welcome to GalleryPage
+    - `about`: Welcome to AboutPage
+- **Routing Logic**: Configured clean URL patterns to navigate between these views.
+
+### ☁️ Module 4: Deployment
+Learned how to take the project from local development to a live server.
+- **Configuration**: Prepared `requirements.txt`, `Procfile`, and `vercel.json`.
+- **Production Settings**: Configured `ALLOWED_HOSTS` and `whitenoise` for static file serving.
+- **Hosting**: Deployed the application on **Vercel**.
+
+---
+
+## 💻 How to Run Locally
+
+1.  **Clone the repository:**
+    ```bash
+    git clone https://github.com/Aditya948351/Django-Workspace.git
+    ```
+2.  **Navigate to the project directory:**
+    ```bash
+    cd Django-Workspace
+    ```
+3.  **Create and activate virtual environment:**
+    ```bash
+    python -m venv .venv
+    .venv\Scripts\activate
+    ```
+4.  **Install dependencies:**
+    ```bash
+    pip install -r requirements.txt
+    ```
+5.  **Run the server:**
+    ```bash
+    # For FirstProject
+    python manage.py runserver
+
+    # For SecondProject
+    cd SecondProject
+    python manage.py runserver
+    ```
+
+---
+
+*This repository is maintained by **Aditya Patil** as part of the Edunet Internship.*
