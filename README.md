@@ -41,4 +41,16 @@
 <ol>
     <li>create template folder in container (not in the Project directory)</li>
     <li>Notify settings.py that we have made those changes</li>
+    <li>in DRIS add this in [] --> <code>DIRS=['templates']</code></li>
+    <div>
+        <li>in ur function in views.py ass this</li>
+        <code>
+            def home(request):
+                return render(request, 'home.html')
+        </code>        
+    </div>
+    <li>Now Restart the Server once again.</li>
+    <li></li>
+    <li></li>
+    
 </ol>
