@@ -38,7 +38,7 @@
     
 
 # Now let's see how we can make the UI in the Routes we created (So we need HTML CSS for that
-<ol>
+<ol type="1">
     <li>create template folder in container (not in the Project directory)</li>
     <li>Notify settings.py that we have made those changes</li>
     <li>in DRIS add this in [] --> <code>DIRS=['templates']</code></li>
