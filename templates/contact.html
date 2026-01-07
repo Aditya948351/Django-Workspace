@@ -1,1 +1,82 @@
-<h1>Contact Page</h1>
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signal | Echoes of Aurora</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;600&family=Orbitron:wght@400;700;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="glass-nav">
+        <div class="container nav-content">
+            <a href="{% url 'home' %}" class="logo glow-text">ECHOES<span
+                    style="color:var(--secondary-color)">.OF.</span>AURORA</a>
+            <div class="nav-links">
+                <a href="{% url 'home' %}">Home</a>
+                <a href="{% url 'about' %}">About</a>
+                <a href="{% url 'gallery' %}">Gallery</a>
+                <a href="{% url 'contact' %}">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <div class="container section-padding" style="margin-top: 4rem; max-width: 800px;">
+            <h1 class="text-gradient" style="text-align: center; margin-bottom: 2rem;">Transmit Signal</h1>
+            <p style="text-align: center; color: var(--text-muted); margin-bottom: 4rem;">
+                Establish a connection with the author or the system.
+            </p>
+
+            <div class="glass-panel" style="padding: 3rem;">
+                <form>
+                    <div style="margin-bottom: 1.5rem;">
+                        <label style="display: block; margin-bottom: 0.5rem; color: var(--primary-color);">Identity
+                            (Name)</label>
+                        <input type="text"
+                            style="width: 100%; padding: 1rem; background: rgba(0,0,0,0.3); border: 1px solid var(--glass-border); color: #fff; border-radius: 5px;">
+                    </div>
+                    <div style="margin-bottom: 1.5rem;">
+                        <label style="display: block; margin-bottom: 0.5rem; color: var(--primary-color);">Frequency
+                            (Email)</label>
+                        <input type="email"
+                            style="width: 100%; padding: 1rem; background: rgba(0,0,0,0.3); border: 1px solid var(--glass-border); color: #fff; border-radius: 5px;">
+                    </div>
+                    <div style="margin-bottom: 2rem;">
+                        <label style="display: block; margin-bottom: 0.5rem; color: var(--primary-color);">Message
+                            Data</label>
+                        <textarea rows="5"
+                            style="width: 100%; padding: 1rem; background: rgba(0,0,0,0.3); border: 1px solid var(--glass-border); color: #fff; border-radius: 5px;"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">Send Transmission</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p class="text-muted">&copy; 2042 Aditya Patil. All rights reserved.</p>
+            <p style="font-size: 0.8rem; margin-top: 0.5rem;">System Status: <span
+                    style="color: var(--primary-color)">ONLINE</span></p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

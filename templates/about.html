@@ -1,1 +1,96 @@
-<h1>About Page</h1>
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Archives | Echoes of Aurora</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;600&family=Orbitron:wght@400;700;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="glass-nav">
+        <div class="container nav-content">
+            <a href="{% url 'home' %}" class="logo glow-text">ECHOES<span
+                    style="color:var(--secondary-color)">.OF.</span>AURORA</a>
+            <div class="nav-links">
+                <a href="{% url 'home' %}">Home</a>
+                <a href="{% url 'about' %}">About</a>
+                <a href="{% url 'gallery' %}">Gallery</a>
+                <a href="{% url 'contact' %}">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <div class="container section-padding" style="margin-top: 4rem;">
+            <h1 class="text-gradient" style="text-align: center; margin-bottom: 4rem;">System Archives</h1>
+
+            <!-- Character Profile -->
+            <div class="glass-panel"
+                style="padding: 3rem; margin-bottom: 4rem; display: flex; gap: 3rem; align-items: center;">
+                <div style="flex: 1;">
+                    <img src="{% static 'images/author.png' %}" alt="Aditya Patil"
+                        style="width: 100%; border-radius: 10px; box-shadow: 0 0 20px rgba(188, 19, 254, 0.3);">
+                </div>
+                <div style="flex: 2;">
+                    <h2 style="color: var(--primary-color); margin-bottom: 1rem;">Aditya Patil</h2>
+                    <h4 style="color: var(--text-muted); margin-bottom: 1.5rem;">The Visionary Coder</h4>
+                    <p style="margin-bottom: 1rem;">
+                        A name whispered with reverence in the clandestine circles of the world's top coders. He lives
+                        in a
+                        modest apartment overlooking the sprawling tech hub of Bangalore. A true technophile with
+                        legendary
+                        grit.
+                    </p>
+                    <p style="margin-bottom: 1rem;">
+                        His mind is a forge, constantly hammering out solutions. Yet, he has his kryptonite:
+                        procrastination. He
+                        digs deep, exploring what others overlook. He doesn't speak for validation; he speaks through
+                        execution.
+                    </p>
+                    <blockquote
+                        style="border-left: 3px solid var(--secondary-color); padding-left: 1rem; color: var(--text-muted); font-style: italic;">
+                        "He sees the world not as it was, but as it could be, a world reshaped by the elegant logic of
+                        code."
+                    </blockquote>
+                </div>
+            </div>
+
+            <!-- Author Bio -->
+            <div class="glass-panel" style="padding: 3rem;">
+                <h2 style="color: var(--secondary-color); margin-bottom: 1.5rem;">About the Author</h2>
+                <p>
+                    Aditya Patil is the creative mind behind "Echoes of Aurora". Blending his passion for technology
+                    with
+                    storytelling, he explores themes of love, time, and the digital frontier.
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p class="text-muted">&copy; 2042 Aditya Patil. All rights reserved.</p>
+            <p style="font-size: 0.8rem; margin-top: 0.5rem;">System Status: <span
+                    style="color: var(--primary-color)">ONLINE</span></p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

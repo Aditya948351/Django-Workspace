@@ -1,1 +1,128 @@
-<h1>Gallery Page</h1>
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visuals | Echoes of Aurora</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;600&family=Orbitron:wght@400;700;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="glass-nav">
+        <div class="container nav-content">
+            <a href="{% url 'home' %}" class="logo glow-text">ECHOES<span
+                    style="color:var(--secondary-color)">.OF.</span>AURORA</a>
+            <div class="nav-links">
+                <a href="{% url 'home' %}">Home</a>
+                <a href="{% url 'about' %}">About</a>
+                <a href="{% url 'gallery' %}">Gallery</a>
+                <a href="{% url 'contact' %}">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <div class="container section-padding" style="margin-top: 4rem;">
+            <h1 class="text-gradient" style="text-align: center; margin-bottom: 4rem;">Chapter Visuals</h1>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+
+                <!-- Chapter 1 -->
+                <div class="glass-panel" style="padding: 2rem; transition: transform 0.3s;"
+                    onmouseover="this.style.transform='translateY(-5px)'"
+                    onmouseout="this.style.transform='translateY(0)'">
+                    <h3 style="color: var(--primary-color);">01. The Whispers</h3>
+                    <p style="font-size: 0.9rem; color: var(--text-muted); margin-top: 1rem;">
+                        Aditya discovers the encrypted signal and begins his quest to decode it, leading him to a hidden
+                        network
+                        of underground hackers.
+                    </p>
+                </div>
+
+                <!-- Chapter 2 -->
+                <div class="glass-panel" style="padding: 2rem; transition: transform 0.3s;"
+                    onmouseover="this.style.transform='translateY(-5px)'"
+                    onmouseout="this.style.transform='translateY(0)'">
+                    <h3 style="color: var(--primary-color);">02. Decoding Past</h3>
+                    <p style="font-size: 0.9rem; color: var(--text-muted); margin-top: 1rem;">
+                        The decoded message reveals fragments of a love story from the 21st century and hints at a lost
+                        technology called "Chrono-Sync."
+                    </p>
+                </div>
+
+                <!-- Chapter 3 -->
+                <div class="glass-panel" style="padding: 2rem; transition: transform 0.3s;"
+                    onmouseover="this.style.transform='translateY(-5px)'"
+                    onmouseout="this.style.transform='translateY(0)'">
+                    <h3 style="color: var(--primary-color);">03. Project Nightingale</h3>
+                    <p style="font-size: 0.9rem; color: var(--text-muted); margin-top: 1rem;">
+                        Aditya tracks down Dr. Evelyn Reed, a retired scientist who worked on Chrono-Sync, and learns
+                        the truth
+                        about its purpose.
+                    </p>
+                </div>
+
+                <!-- Chapter 4 -->
+                <div class="glass-panel" style="padding: 2rem; transition: transform 0.3s;"
+                    onmouseover="this.style.transform='translateY(-5px)'"
+                    onmouseout="this.style.transform='translateY(0)'">
+                    <h3 style="color: var(--primary-color);">04. The Chronarium</h3>
+                    <p style="font-size: 0.9rem; color: var(--text-muted); margin-top: 1rem;">
+                        Aditya and Evelyn embark on a perilous journey to find the Chronarium, located beneath the Swiss
+                        Alps.
+                    </p>
+                </div>
+
+                <!-- Chapter 5 -->
+                <div class="glass-panel" style="padding: 2rem; transition: transform 0.3s;"
+                    onmouseover="this.style.transform='translateY(-5px)'"
+                    onmouseout="this.style.transform='translateY(0)'">
+                    <h3 style="color: var(--primary-color);">05. Ghosts in Machine</h3>
+                    <p style="font-size: 0.9rem; color: var(--text-muted); margin-top: 1rem;">
+                        Inside the Chronarium, Aditya experiences vivid visions of Aurora and uncovers a conspiracy to
+                        control
+                        time.
+                    </p>
+                </div>
+
+                <!-- Chapter 6 -->
+                <div class="glass-panel" style="padding: 2rem; transition: transform 0.3s;"
+                    onmouseover="this.style.transform='translateY(-5px)'"
+                    onmouseout="this.style.transform='translateY(0)'">
+                    <h3 style="color: var(--primary-color);">06. The Time Thief</h3>
+                    <p style="font-size: 0.9rem; color: var(--text-muted); margin-top: 1rem;">
+                        Aditya learns that a rogue faction is attempting to weaponize Chrono-Sync and alter historical
+                        events.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p class="text-muted">&copy; 2042 Aditya Patil. All rights reserved.</p>
+            <p style="font-size: 0.8rem; margin-top: 0.5rem;">System Status: <span
+                    style="color: var(--primary-color)">ONLINE</span></p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

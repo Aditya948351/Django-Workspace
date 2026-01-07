@@ -1,2 +1,393 @@
-<h1>Welcome to Our Website</h1>
-<p>Explore our content and learn more about us.</p>
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Echoes of Aurora</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;600&family=Orbitron:wght@400;700;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <style>
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(5, 5, 16, 0.6), rgba(5, 5, 16, 0.8)),
+            url('{% static "images/hero.png" %}');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero-content {
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-size: 5rem;
+            margin-bottom: 1rem;
+            line-height: 1.1;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+            color: var(--text-muted);
+        }
+
+        .scroll-down {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: float 2s infinite;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="glass-nav">
+        <div class="container nav-content">
+            <a href="{% url 'home' %}" class="logo glow-text">ECHOES<span
+                    style="color:var(--secondary-color)">.OF.</span>AURORA</a>
+            <div class="nav-links">
+                <a href="{% url 'home' %}">Home</a>
+                <a href="{% url 'about' %}">About</a>
+                <a href="{% url 'gallery' %}">Gallery</a>
+                <a href="{% url 'contact' %}">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container hero-content">
+                <h1 class="glow-text">Echoes of <br><span class="text-gradient">Aurora</span></h1>
+                <p>A journey through code, time, and the human heart. <br>By Aditya Patil</p>
+                <a href="#intro" class="btn btn-primary">Begin the Journey</a>
+            </div>
+            <div class="scroll-down">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                    <path d="M7 13l5 5 5-5M7 6l5 5 5-5" />
+                </svg>
+            </div>
+        </section>
+
+        <!-- Book Introduction -->
+        <section id="intro" class="full-width-section" style="background: #08081a;">
+            <div class="container">
+                <div class="glass-panel" style="padding: 4rem;">
+                    <h2 class="text-gradient" style="text-align: center; margin-bottom: 2rem;">Introduction</h2>
+                    <p class="prologue-text">
+                        "Echoes of Aurora" plunges into the world of Aditya Patil, a prodigious coder living in an era
+                        where technology has blurred the lines between reality and the digital realm. Driven by
+                        insatiable curiosity and a quiet ambition, Aditya stumbles upon a hidden signal, a digital
+                        whisper that hints at a love story lost across time and space. This discovery throws him into a
+                        thrilling adventure, fraught with technological challenges, dangerous conspiracies, and the
+                        tantalizing possibility of rewriting history, all while grappling with his own burgeoning
+                        feelings for a woman as enigmatic as the signal itself. This is a story of a visionary who must
+                        reconcile the future he's building with the echoes of the past, and discover that the greatest
+                        codes are those that unlock the human heart.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Character Introduction -->
+        <section class="full-width-section">
+            <div class="container">
+                <div class="glass-panel" style="padding: 4rem;">
+                    <h2 class="text-gradient" style="text-align: center; margin-bottom: 2rem;">Aditya Patil</h2>
+                    <p class="prologue-text">
+                        Aditya Patil, a name whispered with reverence in the clandestine circles of the world's top
+                        coders. He lived in a modest apartment overlooking the sprawling tech hub of Bangalore, a city
+                        he saw as both a vibrant canvas and a labyrinth of opportunity. He was a visionary coder, a true
+                        technophile, and possessed a grit that was borderline legendary. His mind was a forge,
+                        constantly hammering out solutions to problems others deemed impossible. However, even Aditya
+                        had his kryptonite: procrastination. He could spend hours perfecting a single line of code while
+                        neglecting the bigger picture, a trait that often frustrated his closest collaborators. He was
+                        always digging deep, exploring what others overlooked, doesn't speak for validation, speaks
+                        through execution, lifts others up without losing his own step, doesn’t wait for the future—he
+                        builds it, can debug code and decode life alike, Carries confidence like armor, not ego, When he
+                        decides, it’s already half-done, Learns not from lectures, but from late nights, failures, and
+                        Git logs. He saw the world not as it was, but as it could be, a world reshaped by the elegant
+                        logic of code.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Prologue -->
+        <section id="prologue" class="full-width-section" style="background: #08081a;">
+            <div class="container">
+                <div class="glass-panel" style="padding: 4rem;">
+                    <h2 class="text-gradient" style="text-align: center; margin-bottom: 2rem;">Prologue: The Glitch in
+                        the Machine</h2>
+                    <p class="prologue-text">
+                        The year is 2042. Quantum computing is commonplace, neural interfaces are the new smartphones,
+                        and the metaverse is more real than reality for many. Aditya, hunched over his custom-built rig,
+                        was chasing a bug in his latest AI project – a personalized learning algorithm designed to adapt
+                        to individual cognitive styles. The algorithm, nicknamed "Athena," was behaving erratically,
+                        throwing up anomalies that defied all logical explanation. It wasn't a crash, not a malfunction,
+                        but something...else. A pattern within the chaos. A whisper in the digital wind. While debugging
+                        Athena, Aditya stumbled upon a series of encrypted data packets originating from an unknown
+                        source. It was complex, archaic encryption, almost forgotten in the age of quantum security.
+                        Intrigued, and with a gut feeling that this was more than just a random glitch, Aditya began to
+                        unravel the mystery, unaware that this act of curiosity would plunge him into a world of hidden
+                        agendas, forbidden technology, and a love story that transcended the boundaries of time and
+                        space.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Story Timeline -->
+        <div class="story-timeline">
+
+            <!-- Chapter 1 -->
+            <section class="story-chapter">
+                <div class="chapter-content">
+                    <span class="chapter-number">01</span>
+                    <h3 class="chapter-title">The Whispers of Aurora</h3>
+                    <p>Aditya stared at the cascading lines of decrypted code, a symphony of characters that had been
+                        buried within Athena's erratic behavior. The encryption was unlike anything he had encountered,
+                        a hybrid of old ciphers and quantum entanglement techniques. It was as if someone had
+                        deliberately tried to hide this message in plain sight, waiting for the right person to find it.
+                        His relentless curiosity, as always, won. He created a custom decryption algorithm, a patchwork
+                        of reverse engineering and educated guesses. After hours of relentless work, the code began to
+                        yield. What emerged wasn't a program or a data file, but a series of fragmented text messages,
+                        interspersed with audio snippets. The messages spoke of love, loss, and a project shrouded in
+                        secrecy. They were signed simply, "A." He dove deeper, tracing the signal back to its origin. It
+                        led him to a darknet forum known as "The Glitch," a haven for hackers, cryptographers, and
+                        digital rebels. He anonymously posted a query about the signal, carefully worded to avoid
+                        revealing too much. Within hours, he received a private message: "The whispers of Aurora can
+                        lead you to forbidden knowledge, but be warned, some doors are best left unopened." The message
+                        included an IP address located in Prague, a city with its own history of secrets and clandestine
+                        operations. Aditya felt the pull of adventure, the thrill of the unknown. He booked a flight to
+                        Prague, knowing that he was stepping into a world far more dangerous than he could have
+                        imagined.</p>
+                </div>
+            </section>
+
+            <!-- Chapter 2 -->
+            <section class="story-chapter">
+                <div class="chapter-content">
+                    <span class="chapter-number">02</span>
+                    <h3 class="chapter-title">Decoding the Past</h3>
+                    <p>Prague was a city of shadows and secrets, its ancient architecture a stark contrast to the
+                        digital world that Aditya inhabited. He located the IP address from the message, which led him
+                        to a dilapidated bookstore tucked away in a narrow alley. Inside, he found a hidden room behind
+                        a bookshelf, a clandestine meeting place for the members of "The Glitch." They were a motley
+                        crew of hackers, each with their own unique skills and motivations. They recognized Aditya as
+                        the one who had posted about the Aurora signal. "We know who you are, Patil," said a woman with
+                        vibrant pink hair and multiple piercings. "You're the prodigy who can make code sing." She
+                        introduced herself as "Zero," the leader of the Glitch. She explained that the Aurora signal was
+                        a legendary mystery, a ghost in the machine that had haunted the network for years. It was
+                        rumored to be connected to a lost technology called "Chrono-Sync," a theoretical device that
+                        could manipulate time. The fragmented messages were believed to be from a scientist named
+                        Aurora, who had been involved in the project. Zero and her team had managed to piece together
+                        some of the messages, revealing a tragic love story between Aurora and another scientist, a
+                        story that had ended abruptly. They believed that the Chrono-Sync project had been shut down due
+                        to its dangerous potential, but the whispers of Aurora suggested that it might still exist.</p>
+                </div>
+            </section>
+
+            <!-- Chapter 3 -->
+            <section class="story-chapter">
+                <div class="chapter-content">
+                    <span class="chapter-number">03</span>
+                    <h3 class="chapter-title">Project Nightingale</h3>
+                    <p>Aditya, with the help of Zero and her team, delved deeper into the fragmented messages. They
+                        discovered references to "Project Nightingale," the codename for the Chrono-Sync project. The
+                        messages hinted at a specific location, a research facility hidden somewhere in Switzerland.
+                        They also found the name of Dr. Evelyn Reed, a retired scientist who had been a key member of
+                        the Nightingale team. Aditya knew that Evelyn was their only lead to uncovering the truth about
+                        Chrono-Sync. He managed to track her down to a secluded cottage in the Swiss Alps. Evelyn was
+                        initially reluctant to talk, haunted by the memories of the past. But Aditya's genuine curiosity
+                        and his determination to understand the Aurora signal eventually won her over. She revealed that
+                        Chrono-Sync was a revolutionary technology that could allow users to experience events from the
+                        past through neural interfaces. It wasn't time travel, but rather a form of temporal immersion.
+                        The project had been shut down due to ethical concerns and the risk of altering the timeline.
+                        Aurora, she explained, had been a brilliant physicist who had fallen in love with a fellow
+                        scientist named Daniel. Their love story had been intertwined with the Chrono-Sync project, but
+                        it had ended tragically when Daniel disappeared without a trace. Evelyn believed that the Aurora
+                        signal was a desperate attempt by Aurora to communicate with the future, to warn them about the
+                        dangers of Chrono-Sync.</p>
+                </div>
+            </section>
+
+            <!-- Chapter 4 -->
+            <section class="story-chapter">
+                <div class="chapter-content">
+                    <span class="chapter-number">04</span>
+                    <h3 class="chapter-title">The Chronarium</h3>
+                    <p>Evelyn agreed to help Aditya find the Chronarium, the hidden facility where Chrono-Sync had been
+                        developed. According to her records, the Chronarium was located beneath a remote glacier in the
+                        Swiss Alps. The journey was fraught with challenges, navigating treacherous terrain and evading
+                        surveillance technology. They eventually found a hidden entrance, a secret tunnel that led deep
+                        into the mountain. The Chronarium was a marvel of engineering, a vast underground complex filled
+                        with advanced technology, much of it still operational. As they explored the facility, they
+                        discovered evidence of recent activity, suggesting that someone else was looking for
+                        Chrono-Sync. They found research logs, schematics, and experimental data, all pointing to the
+                        immense power and potential danger of the technology. Evelyn warned Aditya that Chrono-Sync
+                        could be used to manipulate memories, alter perceptions, and even rewrite history. They had to
+                        be careful not to fall into the wrong hands.</p>
+                </div>
+            </section>
+
+            <!-- Chapter 5 -->
+            <section class="story-chapter">
+                <div class="chapter-content">
+                    <span class="chapter-number">05</span>
+                    <h3 class="chapter-title">Ghosts in the Machine</h3>
+                    <p>Inside the Chronarium, Aditya encountered a strange phenomenon. As he interacted with the
+                        Chrono-Sync technology, he began to experience vivid visions, glimpses of Aurora's life in the
+                        past. He saw her working in the lab, laughing with Daniel, and struggling with the ethical
+                        implications of Chrono-Sync. The visions were so real, so immersive, that he felt like he was
+                        actually there, experiencing Aurora's life firsthand. He learned about her hopes, her dreams,
+                        and her fears. He also discovered a hidden message within the Chrono-Sync system, a warning from
+                        Aurora about a conspiracy to control time itself. She revealed that a rogue faction within the
+                        Nightingale project had been planning to weaponize Chrono-Sync and use it to alter historical
+                        events for their own gain. The faction, known as "The Time Thief," had been secretly
+                        manipulating the project from the shadows, waiting for the right moment to seize control.</p>
+                </div>
+            </section>
+
+            <!-- Chapter 6 -->
+            <section class="story-chapter">
+                <div class="chapter-content">
+                    <span class="chapter-number">06</span>
+                    <h3 class="chapter-title">The Time Thief</h3>
+                    <p>Aditya realized that the Time Thief was still active, and they were likely responsible for the
+                        recent activity in the Chronarium. He and Evelyn were in a race against time to stop them from
+                        unleashing the full power of Chrono-Sync. They began to analyze the data they had recovered from
+                        the Chronarium, searching for clues about the Time Thief's plans. They discovered that the Time
+                        Thief was planning to use Chrono-Sync to rewrite a pivotal moment in history, an event that
+                        would give them immense power and control over the future. The event was the collapse of a major
+                        financial institution in 2008, an event that had triggered a global economic crisis. The Time
+                        Thief planned to use Chrono-Sync to manipulate the stock market, ensuring that the financial
+                        institution survived, thereby altering the course of history.</p>
+                </div>
+            </section>
+
+            <!-- Chapter 7 -->
+            <section class="story-chapter">
+                <div class="chapter-content">
+                    <span class="chapter-number">07</span>
+                    <h3 class="chapter-title">Digital Shadows</h3>
+                    <p>Aditya and Evelyn knew that they had to disrupt the Time Thief's plans before it was too late.
+                        They used their hacking skills to infiltrate the Time Thief's network, tracking their movements
+                        and gathering intelligence. They discovered that the Time Thief had established a hidden server
+                        farm in Iceland, where they were running the Chrono-Sync simulations. Aditya and Zero, back in
+                        Prague, worked together to develop a counter-program, a digital virus that could disrupt the
+                        Chrono-Sync simulations and prevent the Time Thief from altering the timeline. It was a risky
+                        operation, as the Time Thief's security was incredibly tight, but they had no other choice.</p>
+                </div>
+            </section>
+
+            <!-- Chapter 8 -->
+            <section class="story-chapter">
+                <div class="chapter-content">
+                    <span class="chapter-number">08</span>
+                    <h3 class="chapter-title">The Aurora Protocol</h3>
+                    <p>Aditya realized that he needed to communicate with Aurora in the past to truly thwart the Time
+                        Thief's plans. He devised a plan to use Chrono-Sync to send a message to Aurora, warning her
+                        about the Time Thief and giving her the information she needed to sabotage their efforts. It was
+                        a long shot, as Chrono-Sync was never designed for two-way communication, but Aditya believed
+                        that it was their only hope. He developed a complex protocol, dubbed "The Aurora Protocol," that
+                        would allow him to send a limited amount of data to Aurora through the Chrono-Sync system. He
+                        knew that the Time Thief would be monitoring their activity, so he had to be extremely careful.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Chapter 9 -->
+            <section class="story-chapter">
+                <div class="chapter-content">
+                    <span class="chapter-number">09</span>
+                    <h3 class="chapter-title">Echoes Across Time</h3>
+                    <p>Aditya activated the Aurora Protocol, sending a burst of encrypted data into the Chrono-Sync
+                        system. The data traveled across time, reaching Aurora in the past. Aurora, initially confused,
+                        quickly realized the significance of the message. She understood that her work on Chrono-Sync
+                        had inadvertently created a pathway for the future to communicate with the past. Working with
+                        Daniel, she began to subtly sabotage the Time Thief's efforts, planting false data, disrupting
+                        their simulations, and creating chaos within their network. The Time Thief, unaware of Aurora's
+                        interference, grew increasingly frustrated as their plans began to unravel.</p>
+                </div>
+            </section>
+
+            <!-- Chapter 10 -->
+            <section class="story-chapter">
+                <div class="chapter-content">
+                    <span class="chapter-number">10</span>
+                    <h3 class="chapter-title">Love and Legacy</h3>
+                    <p>Aurora's actions, guided by Aditya's message, ultimately thwarted the Time Thief's plans. The
+                        Time Thief's scheme to manipulate the stock market failed, and their network was exposed. The
+                        authorities moved in, arresting the members of the Time Thief and shutting down their operation.
+                        With the Time Thief defeated, Aditya faced a difficult choice. The Chrono-Sync technology was
+                        too dangerous to be left in the wrong hands, but destroying it would mean severing his
+                        connection with Aurora. He had fallen in love with her, a woman he had never met in person, but
+                        whose spirit had touched his soul across time. In the end, he chose to destroy Chrono-Sync,
+                        ensuring that no one could ever use it to manipulate the past. He knew that he would never see
+                        Aurora again, but he also knew that he had done the right thing. He had protected the timeline,
+                        and he had honored Aurora's legacy. He returned to his life in Bangalore, a changed man. He
+                        continued to code, to innovate, but he never forgot the lessons he had learned from Aurora. He
+                        knew that the greatest codes were not those that unlocked technology, but those that unlocked
+                        the human heart.</p>
+                </div>
+            </section>
+
+        </div>
+
+        <!-- Epilogue -->
+        <section class="full-width-section"
+            style="background: linear-gradient(to top, #050510, #0a0a20); padding-bottom: 8rem;">
+            <div class="container">
+                <div class="glass-panel" style="padding: 4rem; text-align: center;">
+                    <h2 class="text-gradient" style="margin-bottom: 2rem;">Epilogue: A New Dawn</h2>
+                    <p class="prologue-text">
+                        Years later, Aditya stood on a hill overlooking the city of Bangalore. He had built a successful
+                        tech company, dedicated to developing AI for the betterment of humanity. He had also created a
+                        foundation in Aurora's name, supporting young women in STEM fields. He had never forgotten
+                        Aurora, her courage, her intelligence, and her love. One day, he received a package in the mail.
+                        It was a small, antique music box, the kind that Aurora had described in her messages. Inside,
+                        he found a note: "The echoes of Aurora never truly fade. Look to the stars, and you will find
+                        me." Aditya looked up at the night sky, filled with countless stars. He knew that Aurora was out
+                        there, somewhere, her spirit living on in the universe. And he knew that their love story,
+                        though separated by time, would continue to echo across eternity.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p class="text-muted">&copy; 2042 Aditya Patil. All rights reserved.</p>
+            <p style="font-size: 0.8rem; margin-top: 0.5rem;">System Status: <span
+                    style="color: var(--primary-color)">ONLINE</span></p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
