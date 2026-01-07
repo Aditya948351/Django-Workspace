@@ -53,21 +53,62 @@ Welcome to the Django Internship Course. This document serves as a guide and ind
 </ol>
 
 
-# Module 2: UI and Templates
+# Module 2: UI and Templates (FirstProject)
+
+In this module, we enhance the project by adding a user interface using HTML templates and CSS.
 
 <ol type="1">
-    <li>create template folder in container (not in the Project directory)</li>
-    <li>Notify settings.py that we have made those changes</li>
-    <li>in DRIS add this in [] --> <code>DIRS=['templates']</code></li>
-    <div>
-        <li>in ur function in views.py ass this</li>
-        <code>
-            def home(request):
-                return render(request, 'home.html')
-        </code>        
-    </div>
-    <li>Now Restart the Server once again.</li>
-    <li>Lol, Error Received cause u haven't imported render</li>
-    <li>So, Now add the Import statement in views.py <br> <p><code>from django.shortcuts import render</code></p></li>
-    
+    <li><strong>Create Template Directory:</strong>
+        <ul>
+            <li>Create a folder named <code>templates</code> in the root directory (same level as <code>manage.py</code>).</li>
+            <li>Inside <code>templates</code>, create HTML files: <code>home.html</code>, <code>about.html</code>, <code>gallery.html</code>, <code>contact.html</code>.</li>
+        </ul>
+    </li>
+    <li><strong>Configure Settings:</strong>
+        <ul>
+            <li>Open <code>settings.py</code>.</li>
+            <li>Find <code>TEMPLATES</code> list and update <code>'DIRS': []</code> to <code>'DIRS': [BASE_DIR / 'templates']</code>.</li>
+            <li>Configure Static files:
+                <pre><code>STATIC_URL = 'static/'
+STATICFILES_DIRS = [
+    BASE_DIR / 'static',
+]</code></pre>
+            </li>
+        </ul>
+    </li>
+    <li><strong>Update Views (views.py):</strong>
+        <p>Import <code>render</code> and create views for each page.</p>
+        <pre><code>from django.shortcuts import render
+
+def home(request):
+    return render(request, 'home.html')
+
+def about(request):
+    return render(request, 'about.html')
+
+def gallery(request):
+    return render(request, 'gallery.html')
+
+def contact(request):
+    return render(request, 'contact.html')</code></pre>
+    </li>
+    <li><strong>Update URLs (urls.py):</strong>
+        <p>Map the new views to URLs.</p>
+        <pre><code>from django.urls import path
+from . import views
+
+urlpatterns = [
+    path('', views.home, name='home'),
+    path('about/', views.about, name='about'),
+    path('gallery/', views.gallery, name='gallery'),
+    path('contact/', views.contact, name='contact'),
+]</code></pre>
+    </li>
+    <li><strong>Add Styles (Static Files):</strong>
+        <ul>
+            <li>Create a <code>static</code> folder in the root directory.</li>
+            <li>Create a <code>css</code> folder inside <code>static</code>.</li>
+            <li>Add <code>style.css</code> and link it in your HTML files using <code>{% load static %}</code> and <code>&lt;link rel="stylesheet" href="{% static 'css/style.css' %}"&gt;</code>.</li>
+        </ul>
+    </li>
 </ol>
