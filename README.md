@@ -2,6 +2,7 @@
 <ol>
     <li>Check if Virtual invironment is turned on.</li>
     <li>Ensure u are working on Command Prompt terminal not the Powershell</li>
+    <li>First do changes in URLs file then vieews.py file must be made</li>
 </ol>
 
 
@@ -27,9 +28,20 @@
     <code>from . import views</code>
     </li>
     <li>Add this line in URLs: <br> <code>path('home/', views.home, name='home')</code></li>
-    <li></li>
-    <li></li>
-    <li></li>
+    <li>Now create function in views.py otherwise it will give error no Attribute</li>
+    <li>so run the server now using cmd terminal command<code>python manage.py runserver </code></li>
+    <li>Head to the <code>122.0.0.1:8000</code></li>
+        <div>
+            <img src = "https://github.com/Aditya948351/Django-Workspace/blob/main/Readme-assets/views-basic.png?raw=true" alt="views">
+            <img src = "https://github.com/Aditya948351/Django-Workspace/blob/main/Readme-assets/urls-basic.png?raw=true" alt="urls">
+        </div>
+    
+
+# Now let's see how we can make the UI in the Routes we created (So we need HTML CSS for that
+
+
+
+        
     <li></li>
     <li></li>
     <li></li>
