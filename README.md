@@ -1,3 +1,10 @@
+# Some Things to Check before Working with Django
+<ol>
+    <li>Check if Virtual invironment is turned on.</li>
+    <li>Ensure u are working on Command Prompt terminal not the Powershell</li>
+</ol>
+
+
 <h1>Django Project Initialization Steps</h1>
 
 <ol style="color:#fff">
