@@ -1,4 +1,19 @@
-# Some Things to Check before Working with Django
+# Django Internship Course
+
+Welcome to the Django Internship Course. This document serves as a guide and index for the topics covered.
+
+# Index
+
+- [Django Internship Course](#django-internship-course)
+- [Index](#index)
+- [Prerequisites](#prerequisites)
+- [Module 1: Project Initialization](#module-1-project-initialization)
+- [Module 2: UI and Templates](#module-2-ui-and-templates)
+
+---
+
+# Prerequisites
+
 <ol>
     <li>Check if Virtual invironment is turned on.</li>
     <li>Ensure u are working on Command Prompt terminal not the Powershell</li>
@@ -6,7 +21,7 @@
 </ol>
 
 
-<h1>Django Project Initialization Steps</h1>
+# Module 1: Project Initialization
 
 <ol style="color:#fff">
     <li>VS Code >python: create environment     -->> Work on the steps after.</li>
@@ -35,9 +50,11 @@
         <img width=50% src = "https://github.com/Aditya948351/Django-Workspace/blob/main/Readme-assets/views-basic.png?raw=true" alt="views">
         <img width=50% src = "https://github.com/Aditya948351/Django-Workspace/blob/main/Readme-assets/urls-basic.png?raw=true" alt="urls">
     </div>
-    
+</ol>
 
-# Now let's see how we can make the UI in the Routes we created (So we need HTML CSS for that
+
+# Module 2: UI and Templates
+
 <ol type="1">
     <li>create template folder in container (not in the Project directory)</li>
     <li>Notify settings.py that we have made those changes</li>
