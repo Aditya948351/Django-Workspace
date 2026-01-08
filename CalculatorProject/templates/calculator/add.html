@@ -8,7 +8,7 @@
 <style>
     body {
         font-family: Arial, sans-serif;
-        background-color: #f4f4f4;
+        background-color: #ff8b8bff;
         margin: 0 auto;
         padding: 20px;
         display: flex;
@@ -37,7 +37,7 @@
         border-radius: 4px;
     }
 
-    button {
+    input[type="submit"] {
         padding: 10px 15px;
         background: #5cb85c;
         border: none;
@@ -57,10 +57,16 @@
 <body>
     <h1>Add Numbers</h1>
     <div style="display: flex; flex-direction: column; width: 20%; height: 200px; margin-bottom: 20px;">
-        <form>
-            <input type="number" name="num1" placeholder="Enter first number" required>
-            <input type="number" name="num2" placeholder="Enter second number" required>
-            <button type="submit">Add</button>
+        <form method="POST" action="">
+            {% csrf_token %}
+            <input type="number" name="num1" id="num1" placeholder="Enter first number" required>
+            <br>
+            <input type="number" name="num2" id="num2" placeholder="Enter second number" required>
+            <br>
+            <input type="submit" value="Add">
+            <h2>first num = {{ firstnum }}</h2>
+            <h2>second num = {{ secondnum }}</h2>
+            <h2>result = {{ result }}</h2>
         </form>
     </div>
     
