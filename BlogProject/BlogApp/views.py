@@ -2,8 +2,10 @@ from django.shortcuts import render
 
 # Create your views here.
 def home(request):
-    return render(request, 'home.html')
+    return render(request,'home.html')
 
+def create(request):
+    return render(request, 'create.html')
 
-def blog_home(request):
-    return render(request, 'blog.html')
+def display(request):
+    return render(request, 'display.html') 
