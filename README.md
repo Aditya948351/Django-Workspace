@@ -112,3 +112,10 @@ urlpatterns = [
         </ul>
     </li>
 </ol>
+
+
+# Module 3: Creating Django Apps 
+<ol>
+    <li><code>django manage.py startapp AuthorApp</code></li>
+    <li></li>
+</ol>
