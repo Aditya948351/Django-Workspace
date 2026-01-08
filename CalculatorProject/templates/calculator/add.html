@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Calculator</title>
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0 auto;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 90vh;
+    }
+
+    h1 {
+        color: #333;
+    }
+
+    form {
+        background: #fff;
+        padding: 20px;
+        align-items: center;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    input[type="number"] {
+        padding: 10px;
+        width: calc(100% - 22px);
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    button {
+        padding: 10px 15px;
+        background: #5cb85c;
+        border: none;
+        border-radius: 8px;
+        color: white;
+        cursor: pointer;
+        width: 40%;
+        display: block;
+        margin: auto;
+    }
+
+    button:hover {
+        background: #4cae4c;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+</style>
+<body>
+    <h1>Add Numbers</h1>
+    <div style="display: flex; flex-direction: column; width: 20%; height: 200px; margin-bottom: 20px;">
+        <form>
+            <input type="number" name="num1" placeholder="Enter first number" required>
+            <input type="number" name="num2" placeholder="Enter second number" required>
+            <button type="submit">Add</button>
+        </form>
+    </div>
+    
+</body>
+</html>
