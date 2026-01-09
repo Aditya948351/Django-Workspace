@@ -119,3 +119,39 @@ urlpatterns = [
     <li><code>django manage.py startapp AuthorApp</code></li>
     <li></li>
 </ol>
+
+
+
+
+
+
+
+
+
+
+# Module 4: Adding CSS and JS 
+
+<li>In Settings.py  add this line below STATIC_URL variable.
+<code>
+    STATICFILES_DIRS = [
+    BASE_DIR / "static",
+]
+</code>
+</li>
+
+<li></li>
+
+
+
+
+# Module 5 : Installing Bootstrap on Django Project.
+
+<ol>
+    <li><code>pip install bootstrap</code></li>
+    <li>Add to installed Apps</li>
+    <li>{% load django_bootstrap_5 %}
+    {%  %}
+    </li>
+    <li></li>
+    <li>In installed Apps add this bootstrap_5</li>
+</ol>
