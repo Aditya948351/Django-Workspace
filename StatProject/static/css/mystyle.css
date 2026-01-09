@@ -1,17 +1,21 @@
 body {
-    background-color: #f0f0f0;
-    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    /* Bootstrap light gray */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 h1 {
     color: #333;
-    border: 2px solid #ff0101;
+    border-bottom: 2px solid #dc3545;
+    /* Bootstrap danger color */
+    padding-bottom: 10px;
+    margin-bottom: 20px;
 }
 
+/* Container styling is handled by Bootstrap, adding custom shadow */
 .container {
-    width: 80%;
-    margin: 0 auto;
-    padding: 20px;
     background: white;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }

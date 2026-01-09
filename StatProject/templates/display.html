@@ -1,0 +1,20 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Statistics Dashboard</title>
+
+</head>
+<body>
+    <header>
+        <h1>Main Dashboard</h1>
+        <a href="{% url 'display' %}">Go to Display Page</a>
+    </header>
+    <img src="{% static 'img/nature.jpg' %}" alt="Logo">
+
+    <script src="{% static 'js/myscript.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'css/mystyle.css' %}">
+</body>
+</html>
