@@ -1,7 +1,7 @@
 {
     "builds": [
         {
-            "src": "FirstProject/FirstProject/wsgi.py",
+            "src": "SecondProject/SecondProject/wsgi.py",
             "use": "@vercel/python",
             "config": {
                 "maxLambdaSize": "15mb",
@@ -12,7 +12,7 @@
     "routes": [
         {
             "src": "/(.*)",
-            "dest": "FirstProject/FirstProject/wsgi.py"
+            "dest": "SecondProject/SecondProject/wsgi.py"
         }
     ]
 }
