@@ -1,13 +1,13 @@
-from django.http import HttpResponse
+from django.shortcuts import render
 
 def home(request):
-    return HttpResponse("Welcome to HomePage")
+    return render(request, 'home.html')
 
 def contact(request):
-    return HttpResponse("Welcome to ContactsPage")
+    return render(request, 'contact.html')
 
 def gallery(request):
-    return HttpResponse("Welcome to GalleryPage")
+    return render(request, 'gallery.html')
 
 def about(request):
-    return HttpResponse("Welcome to AboutPage")
+    return render(request, 'about.html')
