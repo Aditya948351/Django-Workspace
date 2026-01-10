@@ -125,20 +125,15 @@ urlpatterns = [
 
 # Module 3: Creating Django Apps 
 <ol>
-    <li><code>django manage.py startapp AuthorApp</code></li>
-    <li></li>
+    <li><code>django manage.py startapp <"your app name"></code></li>
+    <li>Modify settings.py with app name in INSTALLED_APPS Section (Also u know u need to add templates in DIR=[] and do it as <code>DIR=['templates']</code></li>
+    <li>Go to Project Level Urls.py and modify there --> Add a new Path line there:- <code>path('appsmainendpoint/', include('appname.urls'))</code></li>
+    <li>Now make your url paths in app level ``urls.py``` and it will work at suppose u have added "add/" so it will access it as ```122.0.0.1:8000/appsmainendpoint/add</li>
+    <li>now run the server and access and check if Everything Works Fine or not</li>
 </ol>
 
 
-
-
-
-
-
-
-
-
-# Module 4: Adding CSS and JS 
+# Module 4: Adding CSS and JS.
 
 <li>In Settings.py  add this line below STATIC_URL variable.
 <code>
