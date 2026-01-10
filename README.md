@@ -8,7 +8,16 @@ Welcome to the Django Internship Course. This document serves as a guide and ind
 - [Index](#index)
 - [Prerequisites](#prerequisites)
 - [Module 1: Project Initialization](#module-1-project-initialization)
-- [Module 2: UI and Templates](#module-2-ui-and-templates)
+- [Module 2: UI and Templates (FirstProject)](#module-2-ui-and-templates-firstproject)
+- [Module 3: Creating Django Apps](#module-3-creating-django-apps)
+- [Module 4: Adding CSS and JS](#module-4-adding-css-and-js)
+- [Module 5 : Installing Bootstrap on Django Project.](#module-5--installing-bootstrap-on-django-project)
+- [Module 6 : SQL installing.](#module-6--sql-installing)
+- [Module 7: Deployment to Vercel](#module-7-deployment-to-vercel)
+- [Module 8: Offline Bootstrap Configuration](#module-8-offline-bootstrap-configuration)
+- [Module 9: SMS Project \& StudentApp Initialization](#module-9-sms-project--studentapp-initialization)
+- [Module 10: MySQL Database Configuration](#module-10-mysql-database-configuration)
+- [Module 11 : opening config with initial.py in migrations](#module-11--opening-config-with-initialpy-in-migrations)
 
 ---
 
@@ -155,3 +164,76 @@ urlpatterns = [
     <li></li>
     <li>In installed Apps add this bootstrap_5</li>
 </ol>
+
+
+
+
+# Module 6 : SQL installing.
+
+# Module 7: Deployment to Vercel
+
+1.  **Prepare Project**:
+    *   Create `vercel.json` in root.
+    *   Create `requirements.txt`: `pip freeze > requirements.txt`.
+    *   Create `runtime.txt` (e.g., `python-3.9`).
+2.  **Configuration**:
+    *   Ensure `WSGI` application is correctly pointed in `vercel.json`.
+    *   Set `ALLOWED_HOSTS = ['.vercel.app']` in `settings.py`.
+3.  **Deploy**:
+    *   Push code to GitHub.
+    *   Import project in Vercel dashboard.
+    *   Deploy.
+
+# Module 8: Offline Bootstrap Configuration
+
+1.  **Download Bootstrap**:
+    *   Get compiled CSS and JS files from [getbootstrap.com](https://getbootstrap.com).
+2.  **Static Files Setup**:
+    *   Place files in `static/css/` and `static/js/`.
+    *   Ensure `STATICFILES_DIRS` is configured in `settings.py`.
+3.  **Link in Templates**:
+    ```html
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+    ```
+
+# Module 9: SMS Project & StudentApp Initialization
+
+1.  **Create Project**:
+    *   `django-admin startproject SMS`
+    *   `cd SMS`
+2.  **Create App**:
+    *   `python manage.py startapp studentapp`
+3.  **Register App**:
+    *   Add `'studentapp'` to `INSTALLED_APPS` in `settings.py`.
+4.  **Migrate**:
+    *   `python manage.py migrate`
+
+# Module 10: MySQL Database Configuration
+
+1.  **Install Driver**:
+    *   `pip install mysqlclient`
+2.  **Configure Settings**:
+    *   Update `DATABASES` in `settings.py`:
+        ```python
+        DATABASES = {
+            'default': {
+                'ENGINE': 'django.db.backends.mysql',
+                'NAME': 'SMS',  # Your DB Name
+                'USER': 'root',
+                'PASSWORD': 'yourpassword',
+                'HOST': 'localhost',
+                'PORT': '3306',
+            }
+        }
+        ```
+3.  **Apply Migrations**:
+    *   `python manage.py migrate`
+
+
+
+# Module 11 : opening config with initial.py in migrations
+<li>Added my app in settings.py</li>
+<li></li>
+
