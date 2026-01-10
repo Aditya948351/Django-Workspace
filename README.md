@@ -235,5 +235,6 @@ urlpatterns = [
 
 # Module 11 : opening config with initial.py in migrations
 <li>Added my app in settings.py</li>
-<li></li>
+<li>Added my app in admin.py</li>
+
 

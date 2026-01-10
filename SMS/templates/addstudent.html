@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Add New Student Form</h1>
+    <form method="POST">
+        {% csrf_token %}
+        Name: <input type="text" name="name" required><br><br>
+        Age: <input type="number" name="age" required><br><br>
+        Roll No: <input type="number" name="rollno" required><br><br>
+        Email: <input type="email" name="email" required><br><br>
+        Phone: <input type="text" name="phone" required><br><br>
+        Address: <textarea name="address" required></textarea><br><br>
+        <input type="submit" value="Add Student">
+    </form>
+</body>
+</html>
